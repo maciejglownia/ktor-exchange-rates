@@ -2,10 +2,10 @@ package com.maciejglownia.data
 
 fun getRatesFor20221215(): Map<String, Double> {
     return mapOf(
-        "AAA" to 0.01,
-        "BBB" to 0.02,
-        "CCC" to 0.03,
-        "DDD" to 0.04,
+        "AAA" to 1.01,
+        "BBB" to 1.02,
+        "CCC" to 1.03,
+        "DDD" to 1.04,
         "EUR" to 1.00,
         "FFF" to 1.06,
         "GGG" to 1.07,
@@ -26,5 +26,121 @@ fun getRatesFor20221215(): Map<String, Double> {
         "XXX" to 1.22,
         "YYY" to 1.23,
         "ZZZ" to 1.24,
+    )
+}
+
+fun getRatesFor20221214(): Map<String, Double> {
+    return mapOf(
+        "AAA" to 2.01,
+        "BBB" to 2.02,
+        "CCC" to 2.03,
+        "DDD" to 2.04,
+        "EUR" to 2.00,
+        "FFF" to 2.06,
+        "GGG" to 2.07,
+        "HHH" to 2.08,
+        "III" to 2.09,
+        "JJJ" to 2.10,
+        "KKK" to 2.11,
+        "LLL" to 2.12,
+        "MMM" to 2.13,
+        "NNN" to 2.14,
+        "OOO" to 2.15,
+        "PPP" to 2.16,
+        "RRR" to 2.17,
+        "SSS" to 2.18,
+        "TTT" to 2.19,
+        "UUU" to 2.20,
+        "WWW" to 2.21,
+        "XXX" to 2.22,
+        "YYY" to 2.23,
+        "ZZZ" to 2.24,
+    )
+}
+
+fun getRatesFor20221213(): Map<String, Double> {
+    return mapOf(
+        "AAA" to 3.01,
+        "BBB" to 3.02,
+        "CCC" to 3.03,
+        "DDD" to 3.04,
+        "EUR" to 3.00,
+        "FFF" to 3.06,
+        "GGG" to 3.07,
+        "HHH" to 3.08,
+        "III" to 3.09,
+        "JJJ" to 3.10,
+        "KKK" to 3.11,
+        "LLL" to 3.12,
+        "MMM" to 3.13,
+        "NNN" to 3.14,
+        "OOO" to 3.15,
+        "PPP" to 3.16,
+        "RRR" to 3.17,
+        "SSS" to 3.18,
+        "TTT" to 3.19,
+        "UUU" to 3.20,
+        "WWW" to 3.21,
+        "XXX" to 3.22,
+        "YYY" to 3.23,
+        "ZZZ" to 3.24,
+    )
+}
+
+fun getRatesFor20221212(): Map<String, Double> {
+    return mapOf(
+        "AAA" to 4.01,
+        "BBB" to 4.02,
+        "CCC" to 4.03,
+        "DDD" to 4.04,
+        "EUR" to 4.00,
+        "FFF" to 4.06,
+        "GGG" to 4.07,
+        "HHH" to 4.08,
+        "III" to 4.09,
+        "JJJ" to 4.10,
+        "KKK" to 4.11,
+        "LLL" to 4.12,
+        "MMM" to 4.13,
+        "NNN" to 4.14,
+        "OOO" to 4.15,
+        "PPP" to 4.16,
+        "RRR" to 4.17,
+        "SSS" to 4.18,
+        "TTT" to 4.19,
+        "UUU" to 4.20,
+        "WWW" to 4.21,
+        "XXX" to 4.22,
+        "YYY" to 4.23,
+        "ZZZ" to 4.24,
+    )
+}
+
+fun getRatesFor20221211(): Map<String, Double> {
+    return mapOf(
+        "AAA" to 5.01,
+        "BBB" to 5.02,
+        "CCC" to 5.03,
+        "DDD" to 5.04,
+        "EUR" to 5.00,
+        "FFF" to 5.06,
+        "GGG" to 5.07,
+        "HHH" to 5.08,
+        "III" to 5.09,
+        "JJJ" to 5.10,
+        "KKK" to 5.11,
+        "LLL" to 5.12,
+        "MMM" to 5.13,
+        "NNN" to 5.14,
+        "OOO" to 5.15,
+        "PPP" to 5.16,
+        "RRR" to 5.17,
+        "SSS" to 5.18,
+        "TTT" to 5.19,
+        "UUU" to 5.20,
+        "WWW" to 5.21,
+        "XXX" to 5.22,
+        "YYY" to 5.23,
+        "ZZZ" to 5.24,
     )
 }
