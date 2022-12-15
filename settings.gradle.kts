@@ -1,0 +1,1 @@
+rootProject.name = "com.maciejglownia.ktor-exchange-rates"
