@@ -9,13 +9,14 @@ import io.ktor.server.routing.*
 
 /**
  * @value rates20221215 is an object wit exchange rates data for a specific date.
- * When rates20221215 means it is for 15th of December 2022
+ * When rates20221215 means it is for 18th of December 2022
  */
-val rates20221215 = ExchangeRateData("EUR", "2022-12-15", getRatesFor20221215())
-val rates20221214 = ExchangeRateData("EUR", "2022-12-14", getRatesFor20221214())
-val rates20221213 = ExchangeRateData("EUR", "2022-12-13", getRatesFor20221213())
-val rates20221212 = ExchangeRateData("EUR", "2022-12-12", getRatesFor20221212())
-val rates20221211 = ExchangeRateData("EUR", "2022-12-11", getRatesFor20221211())
+val rates20221220 = ExchangeRateData("EUR", "2022-12-20", getRatesFor20221220())
+val rates20221219 = ExchangeRateData("EUR", "2022-12-19", getRatesFor20221219())
+val rates20221218 = ExchangeRateData("EUR", "2022-12-18", getRatesFor20221218())
+val rates20221217 = ExchangeRateData("EUR", "2022-12-17", getRatesFor20221217())
+val rates20221216 = ExchangeRateData("EUR", "2022-12-16", getRatesFor20221216())
+val rates20221215 = ExchangeRateData("EUR", "2022-12-15", getRatesFor20221214())
 
 /**
  * Gets rates for specific date. Next parse it to JSON and respond with JSON String.
@@ -24,11 +25,13 @@ val rates20221211 = ExchangeRateData("EUR", "2022-12-11", getRatesFor20221211())
 fun Route.exchangeRatesData() {
     get("/{data}") {
         when (call.parameters["data"]) {
+            // TODO make it automatically
+            "2022-12-20" -> call.respond(HttpStatusCode.OK, rates20221220)
+            "2022-12-19" -> call.respond(HttpStatusCode.OK, rates20221219)
+            "2022-12-18" -> call.respond(HttpStatusCode.OK, rates20221218)
+            "2022-12-17" -> call.respond(HttpStatusCode.OK, rates20221217)
+            "2022-12-16" -> call.respond(HttpStatusCode.OK, rates20221216)
             "2022-12-15" -> call.respond(HttpStatusCode.OK, rates20221215)
-            "2022-12-14" -> call.respond(HttpStatusCode.OK, rates20221214)
-            "2022-12-13" -> call.respond(HttpStatusCode.OK, rates20221213)
-            "2022-12-12" -> call.respond(HttpStatusCode.OK, rates20221212)
-            "2022-12-11" -> call.respond(HttpStatusCode.OK, rates20221211)
             else -> call.respond(HttpStatusCode.BadRequest)
         }
     }

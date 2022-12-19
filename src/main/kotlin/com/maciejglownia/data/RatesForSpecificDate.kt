@@ -1,6 +1,34 @@
 package com.maciejglownia.data
 
-fun getRatesFor20221215(): Map<String, Double> {
+fun getRatesFor20221220(): Map<String, Double> {
+    return mapOf(
+        "AAA" to 0.01,
+        "BBB" to 0.02,
+        "CCC" to 0.03,
+        "DDD" to 0.04,
+        "EUR" to 0.00,
+        "FFF" to 0.06,
+        "GGG" to 0.07,
+        "HHH" to 0.08,
+        "III" to 0.09,
+        "JJJ" to 0.10,
+        "KKK" to 0.11,
+        "LLL" to 0.12,
+        "MMM" to 0.13,
+        "NNN" to 0.14,
+        "OOO" to 0.15,
+        "PPP" to 0.16,
+        "RRR" to 0.17,
+        "SSS" to 0.18,
+        "TTT" to 0.19,
+        "UUU" to 0.20,
+        "WWW" to 0.21,
+        "XXX" to 0.22,
+        "YYY" to 0.23,
+        "ZZZ" to 0.24,
+    )
+}
+fun getRatesFor20221219(): Map<String, Double> {
     return mapOf(
         "AAA" to 1.01,
         "BBB" to 1.02,
@@ -29,7 +57,7 @@ fun getRatesFor20221215(): Map<String, Double> {
     )
 }
 
-fun getRatesFor20221214(): Map<String, Double> {
+fun getRatesFor20221218(): Map<String, Double> {
     return mapOf(
         "AAA" to 2.01,
         "BBB" to 2.02,
@@ -58,7 +86,7 @@ fun getRatesFor20221214(): Map<String, Double> {
     )
 }
 
-fun getRatesFor20221213(): Map<String, Double> {
+fun getRatesFor20221217(): Map<String, Double> {
     return mapOf(
         "AAA" to 3.01,
         "BBB" to 3.02,
@@ -87,7 +115,7 @@ fun getRatesFor20221213(): Map<String, Double> {
     )
 }
 
-fun getRatesFor20221212(): Map<String, Double> {
+fun getRatesFor20221216(): Map<String, Double> {
     return mapOf(
         "AAA" to 4.01,
         "BBB" to 4.02,
@@ -116,7 +144,7 @@ fun getRatesFor20221212(): Map<String, Double> {
     )
 }
 
-fun getRatesFor20221211(): Map<String, Double> {
+fun getRatesFor20221214(): Map<String, Double> {
     return mapOf(
         "AAA" to 5.01,
         "BBB" to 5.02,
