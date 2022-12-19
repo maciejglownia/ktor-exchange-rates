@@ -6,17 +6,31 @@ import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import java.time.LocalDate
 
-/**
- * @value rates20221215 is an object wit exchange rates data for a specific date.
- * When rates20221215 means it is for 18th of December 2022
- */
-val rates20221220 = ExchangeRateData("EUR", "2022-12-20", getRatesFor20221220())
-val rates20221219 = ExchangeRateData("EUR", "2022-12-19", getRatesFor20221219())
-val rates20221218 = ExchangeRateData("EUR", "2022-12-18", getRatesFor20221218())
-val rates20221217 = ExchangeRateData("EUR", "2022-12-17", getRatesFor20221217())
-val rates20221216 = ExchangeRateData("EUR", "2022-12-16", getRatesFor20221216())
-val rates20221215 = ExchangeRateData("EUR", "2022-12-15", getRatesFor20221214())
+const val CURRENCY_SYMBOL = "EUR"
+private val currentDate: LocalDate = LocalDate.now()
+private val previousDate: LocalDate = LocalDate.now().minusDays(1)
+private val twoPreviousDate: LocalDate = LocalDate.now().minusDays(2)
+private val threePreviousDate: LocalDate = LocalDate.now().minusDays(3)
+private val fourPreviousDate: LocalDate = LocalDate.now().minusDays(4)
+private val fivePreviousDate: LocalDate = LocalDate.now().minusDays(5)
+
+private val currentDateAsString : String = currentDate.toString()
+private val previousDateAsString : String = previousDate.toString()
+private val twoPreviousDateAsString : String = twoPreviousDate.toString()
+private val threePreviousDateAsString : String = threePreviousDate.toString()
+private val fourPreviousDateAsString : String = fourPreviousDate.toString()
+private val fivePreviousDateAsString : String = fivePreviousDate.toString()
+
+
+val ratesForCurrentDate = ExchangeRateData(CURRENCY_SYMBOL, currentDateAsString, getRatesZero())
+val ratesForPreviousDate = ExchangeRateData(CURRENCY_SYMBOL, previousDateAsString, getRatesOne())
+val ratesForTwoPreviousDate = ExchangeRateData(CURRENCY_SYMBOL, twoPreviousDateAsString, getRatesTwo())
+val ratesForThreePreviousDate = ExchangeRateData(CURRENCY_SYMBOL, threePreviousDateAsString, getRatesThree())
+val ratesForFourPreviousDate = ExchangeRateData(CURRENCY_SYMBOL, fourPreviousDateAsString, getRatesFour())
+val ratesForFivePreviousDate = ExchangeRateData(CURRENCY_SYMBOL, fivePreviousDateAsString, getRatesFive())
+
 
 /**
  * Gets rates for specific date. Next parse it to JSON and respond with JSON String.
@@ -25,14 +39,13 @@ val rates20221215 = ExchangeRateData("EUR", "2022-12-15", getRatesFor20221214())
 fun Route.exchangeRatesData() {
     get("/{data}") {
         when (call.parameters["data"]) {
-            // TODO make it automatically
-            "2022-12-20" -> call.respond(HttpStatusCode.OK, rates20221220)
-            "2022-12-19" -> call.respond(HttpStatusCode.OK, rates20221219)
-            "2022-12-18" -> call.respond(HttpStatusCode.OK, rates20221218)
-            "2022-12-17" -> call.respond(HttpStatusCode.OK, rates20221217)
-            "2022-12-16" -> call.respond(HttpStatusCode.OK, rates20221216)
-            "2022-12-15" -> call.respond(HttpStatusCode.OK, rates20221215)
-            else -> call.respond(HttpStatusCode.BadRequest)
+            currentDateAsString -> call.respond(HttpStatusCode.OK, ratesForCurrentDate)
+            previousDateAsString -> call.respond(HttpStatusCode.OK, ratesForPreviousDate)
+            twoPreviousDateAsString -> call.respond(HttpStatusCode.OK, ratesForTwoPreviousDate)
+            threePreviousDateAsString -> call.respond(HttpStatusCode.OK, ratesForThreePreviousDate)
+            fourPreviousDateAsString -> call.respond(HttpStatusCode.OK, ratesForFourPreviousDate)
+            fivePreviousDateAsString -> call.respond(HttpStatusCode.OK, ratesForFivePreviousDate)
+            else -> call.respond(HttpStatusCode.NotFound,"There is no more records available!")
         }
     }
 }

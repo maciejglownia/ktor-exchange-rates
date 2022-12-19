@@ -1,6 +1,6 @@
 package com.maciejglownia.data
 
-fun getRatesFor20221220(): Map<String, Double> {
+fun getRatesZero(): Map<String, Double> {
     return mapOf(
         "AAA" to 0.01,
         "BBB" to 0.02,
@@ -28,7 +28,7 @@ fun getRatesFor20221220(): Map<String, Double> {
         "ZZZ" to 0.24,
     )
 }
-fun getRatesFor20221219(): Map<String, Double> {
+fun getRatesOne(): Map<String, Double> {
     return mapOf(
         "AAA" to 1.01,
         "BBB" to 1.02,
@@ -57,7 +57,7 @@ fun getRatesFor20221219(): Map<String, Double> {
     )
 }
 
-fun getRatesFor20221218(): Map<String, Double> {
+fun getRatesTwo(): Map<String, Double> {
     return mapOf(
         "AAA" to 2.01,
         "BBB" to 2.02,
@@ -86,7 +86,7 @@ fun getRatesFor20221218(): Map<String, Double> {
     )
 }
 
-fun getRatesFor20221217(): Map<String, Double> {
+fun getRatesThree(): Map<String, Double> {
     return mapOf(
         "AAA" to 3.01,
         "BBB" to 3.02,
@@ -115,7 +115,7 @@ fun getRatesFor20221217(): Map<String, Double> {
     )
 }
 
-fun getRatesFor20221216(): Map<String, Double> {
+fun getRatesFour(): Map<String, Double> {
     return mapOf(
         "AAA" to 4.01,
         "BBB" to 4.02,
@@ -144,7 +144,7 @@ fun getRatesFor20221216(): Map<String, Double> {
     )
 }
 
-fun getRatesFor20221214(): Map<String, Double> {
+fun getRatesFive(): Map<String, Double> {
     return mapOf(
         "AAA" to 5.01,
         "BBB" to 5.02,
